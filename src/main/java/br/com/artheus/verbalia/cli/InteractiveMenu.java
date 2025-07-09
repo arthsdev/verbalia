@@ -29,12 +29,12 @@ public class InteractiveMenu {
             System.out.println("*********************");
             System.out.println("***** Main Menu *****");
             System.out.println("*********************");
-            System.out.println("* 1. - Find Book by Title (API + DB) *");
+            System.out.println("* 1. - Find Book by Title (API + DB)  *");
             System.out.println("* 2. - List Registered Books          *");
             System.out.println("* 3. - List Authors                   *");
             System.out.println("* 4. - List Authors Alive In Year     *");
             System.out.println("* 5. - List Books By Language         *");
-            System.out.println("* 6. - Exit                          *");
+            System.out.println("* 6. - Exit                           *");
             System.out.println("*********************");
             System.out.print("Enter option: ");
 

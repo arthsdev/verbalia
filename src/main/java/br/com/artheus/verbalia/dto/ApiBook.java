@@ -1,4 +1,4 @@
-package br.com.artheus.verbalia.DTO;
+package br.com.artheus.verbalia.dto;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 

@@ -1,7 +1,7 @@
 package br.com.artheus.verbalia.service;
 
-import br.com.artheus.verbalia.DTO.ApiBook;
-import br.com.artheus.verbalia.DTO.ApiResponse;
+import br.com.artheus.verbalia.dto.ApiBook;
+import br.com.artheus.verbalia.dto.ApiResponse;
 import br.com.artheus.verbalia.exceptions.BookNotFoundException;
 import br.com.artheus.verbalia.model.Author;
 import br.com.artheus.verbalia.model.Book;

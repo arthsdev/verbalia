@@ -1,9 +1,7 @@
 package br.com.artheus.verbalia.service;
 
 import br.com.artheus.verbalia.exceptions.AuthorNotFoundException;
-import br.com.artheus.verbalia.exceptions.BookNotFoundException;
 import br.com.artheus.verbalia.model.Author;
-import br.com.artheus.verbalia.model.Book;
 import br.com.artheus.verbalia.repository.AuthorRepository;
 import org.springframework.stereotype.Service;
 
@@ -13,8 +11,7 @@ import java.util.List;
 public class AuthorService {
     private final AuthorRepository authorRepository;
 
-
-    public AuthorService(AuthorRepository authorRepository){
+    public AuthorService(AuthorRepository authorRepository) {
         this.authorRepository = authorRepository;
     }
 
@@ -33,5 +30,9 @@ public class AuthorService {
 
     public void deleteById(Long id) {
         authorRepository.deleteById(id);
+    }
+
+    public List<Author> findAuthorsAliveInYear(int year) {
+        return authorRepository.findAuthorsAliveInYear(year);
     }
 }

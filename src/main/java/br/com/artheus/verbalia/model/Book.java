@@ -4,26 +4,26 @@ import jakarta.persistence.*;
 
 @Entity
 public class Book {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
     private String title;
+
     private String language;
+
     private Long downloads;
-    @ManyToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "author_id")
+
+    @ManyToOne(fetch = FetchType.EAGER)
     private Author author;
 
-    public Book(long id, String title, String language, Long downloads, Author author) {
-        this.id = id;
-        this.title = title;
-        this.language = language;
-        this.downloads = downloads;
-        this.author = author;
+    public Long getId() {
+        return id;
     }
 
-    public Book(){
-
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public String getTitle() {
@@ -60,8 +60,7 @@ public class Book {
 
     @Override
     public String toString() {
-        return
-                "title='" + title + '\'' +
+        return "title='" + title + '\'' +
                 ", language='" + language + '\'' +
                 ", downloads=" + downloads +
                 ", author=" + author;
